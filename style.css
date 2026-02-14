@@ -1,23 +1,54 @@
+/* ---------- GLOBAL ---------- */
 body {
   margin: 0;
-  background: #000;
-  color: #00ff66;
-  font-family: monospace;
-}
-#terminal {
-  padding: 20px;
+  background: #0d1117; /* modern dark */
+  color: #58ff9a;
+  font-family: "Fira Code", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+}
+
+/* ---------- TERMINAL BOX ---------- */
+#terminal {
+  width: 85%;
+  max-width: 1100px;
+  height: 85vh;
+  background: #161b22;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,255,120,0.15);
+  padding: 20px;
   overflow-y: auto;
 }
-#output div { line-height: 1.5; white-space: pre-wrap; }
-#input-line { display: flex; align-items: center; gap: 8px; }
-.prompt { white-space: nowrap; }
+
+/* ---------- OUTPUT ---------- */
+#output div {
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* ---------- INPUT LINE ---------- */
+#input-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.prompt {
+  color: #58ff9a;
+  font-weight: bold;
+}
+
+/* ---------- INPUT ---------- */
 input {
   flex: 1;
   background: transparent;
   border: none;
   outline: none;
-  color: #00ff66;
-  font-family: monospace;
-  caret-color: #00ff66;
+  color: #58ff9a;
+  font-family: inherit;
+  font-size: 15px;
+  caret-color: #58ff9a;
 }
