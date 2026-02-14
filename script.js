@@ -13,21 +13,43 @@ print("Type 'help' to start.");
 print("");
 
 const commands = {
-  help: `Available commands:
-whoami
-summary
-skills
-experience
-projects
-contact
-clear`,
-  whoami: "Selvin Raj P | Senior DevOps Engineer | Platform Engineering",
-  summary: "8+ years in AWS, Kubernetes, OpenShift, CI/CD, Terraform, Platform Engineering",
-  skills: "AWS | EKS | OpenShift | Terraform | Helm | Jenkins | GitHub Actions | ArgoCD | Python",
-  experience: "Wipro | Cotiviti | Capgemini | Aggregate Intelligence | TNCA",
-  projects: "- Kubernetes Platform Modernization\n- Enterprise CI/CD Framework\n- OpenShift Platform Engineering",
-  contact: "Email: selvinjethu@gmail.com | Tamil Nadu, India"
+
+help: `
+Select an option:
+
+1 - About Me
+2 - Skills
+3 - Experience
+4 - Projects
+5 - Contact
+clear - Clear terminal
+`,
+
+1: "Selvin Raj P | Senior DevOps Engineer | Platform Engineering",
+
+2: "AWS | EKS | OpenShift | Terraform | Helm | Jenkins | GitHub Actions | ArgoCD | Python",
+
+3: "Wipro | Cotiviti | Capgemini | Aggregate Intelligence | TNCA",
+
+4: `
+- Kubernetes Platform Modernization
+- Enterprise CI/CD Framework
+- OpenShift Platform Engineering
+`,
+
+5: "Email: selvinjethu@gmail.com | Tamil Nadu, India",
+
+about: "Selvin Raj P | Senior DevOps Engineer | Platform Engineering",
+skills: "AWS | EKS | OpenShift | Terraform | Helm | Jenkins | GitHub Actions | ArgoCD | Python",
+experience: "Wipro | Cotiviti | Capgemini | Aggregate Intelligence | TNCA",
+projects: `
+- Kubernetes Platform Modernization
+- Enterprise CI/CD Framework
+- OpenShift Platform Engineering
+`,
+contact: "Email: selvinjethu@gmail.com | Tamil Nadu, India"
 };
+
 
 input.addEventListener("keydown", function(e){
   if (e.key !== "Enter") return;
