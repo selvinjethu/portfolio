@@ -1,7 +1,7 @@
 const input = document.getElementById("command");
 const output = document.getElementById("output");
 
-/* ---------- PRINT FUNCTION ---------- */
+/* ---------- PRINT ---------- */
 function print(text = "") {
   const div = document.createElement("div");
   div.textContent = text;
@@ -12,7 +12,7 @@ function print(text = "") {
 /* ---------- MENU ---------- */
 function showMenu() {
   print("");
-  print("Select next option:");
+  print("Select option: 1 2 3 4 5 6");
   print("1 About | 2 Skills | 3 Experience | 4 Projects | 5 Contact | 6 Resume");
   print("");
 }
@@ -28,11 +28,13 @@ function downloadResume() {
 }
 
 /* ---------- WELCOME ---------- */
-print("╔══════════════════════════════════════╗");
-print("   SELVIN RAJ — DEVOPS TERMINAL v2");
-print("   Senior DevOps Engineer | Platform Engineering");
-print("╚══════════════════════════════════════╝");
-print("Type 'help' or choose a number.");
+print("");
+print("────────────────────────────────────────");
+print(" SELVIN RAJ • DEVOPS TERMINAL PORTFOLIO ");
+print(" Senior DevOps Engineer | Platform Engineering");
+print("────────────────────────────────────────");
+print("");
+print("Type 'help' or choose a number:");
 showMenu();
 
 /* ---------- COMMAND DATA ---------- */
@@ -42,84 +44,74 @@ help: `
 Available options:
 
 1 - About Me
-2 - Technical Skills
+2 - Skills
 3 - Experience
-4 - Key Projects
+4 - Projects
 5 - Contact
 6 - Download Resume
 
-Other commands:
-help  - Show menu
 clear - Clear terminal
 `,
 
 "1": `
 Selvin Raj P
-Senior DevOps Engineer | Platform Engineering | Cloud Infrastructure
+Senior DevOps Engineer | Platform Engineering
 
-8+ years experience in:
-- AWS cloud infrastructure
-- Kubernetes / OpenShift platforms
-- CI/CD automation
-- GitOps & Infrastructure as Code
+8+ years in:
+- AWS Cloud Infrastructure
+- Kubernetes & OpenShift
+- CI/CD & GitOps
+- Terraform & Automation
 `,
 
 "2": `
 Cloud: AWS, Azure, GCP
 Containers: Kubernetes, EKS, OpenShift, Docker
-CI/CD: Jenkins, GitHub Actions, ArgoCD, Harness
+CI/CD: Jenkins, GitHub Actions, ArgoCD
 IaC: Terraform, Helm, Ansible, Python
-Observability: Prometheus, Grafana, CloudWatch, Splunk
-Security: SonarQube, Veracode, IAM
+Monitoring: Prometheus, Grafana, CloudWatch
 `,
 
 "3": `
-Wipro (Technical Lead / Senior DevOps Engineer) — 2025-Present
+Wipro — Technical Lead / Senior DevOps Engineer
 Cotiviti — Senior DevOps Engineer
 Capgemini — Consultant DevOps Engineer
-Aggregate Intelligence — DevOps & Cloud Engineer
+Aggregate Intelligence — DevOps Engineer
 TNCA Club — System Administrator
 `,
 
 "4": `
-- Kubernetes Platform Modernization (EKS migration)
+- Kubernetes Platform Modernization
 - Enterprise CI/CD Automation Framework
-- OpenShift Platform Engineering & Upgrades
+- OpenShift Platform Engineering
 `,
 
 "5": `
 Tamil Nadu, India
 Email: selvinjethu@gmail.com
-Role Focus: Platform Engineering | SRE | Cloud Infra
+Senior DevOps | Platform Engineering | SRE
 `,
 
-"6": "Downloading resume...",
-
-about: "Use option 1",
-skills: "Use option 2",
-experience: "Use option 3",
-projects: "Use option 4",
-contact: "Use option 5",
-resume: "Downloading resume..."
+"6": "Downloading resume..."
 };
 
 /* ---------- INPUT HANDLER ---------- */
-input.addEventListener("keydown", function (e) {
+input.addEventListener("keydown", function(e){
 
-  if (e.key === "Enter") {
+  if(e.key === "Enter"){
 
     const cmd = input.value.trim().toLowerCase();
 
-    print("selvin@cloud-space:~$ " + cmd);
+    print("selvin@cloud:~$ " + cmd);
 
-    if (cmd === "clear") {
+    if(cmd === "clear"){
       output.innerHTML = "";
       showMenu();
       input.value = "";
       return;
     }
 
-    if (cmd === "6" || cmd === "resume") {
+    if(cmd === "6" || cmd === "resume"){
       print("Downloading resume...");
       downloadResume();
       showMenu();
@@ -127,7 +119,7 @@ input.addEventListener("keydown", function (e) {
       return;
     }
 
-    if (commands[cmd]) {
+    if(commands[cmd]){
       print(commands[cmd]);
       showMenu();
     } else {
@@ -139,5 +131,5 @@ input.addEventListener("keydown", function (e) {
   }
 });
 
-/* ---------- FOCUS INPUT ---------- */
+/* ---------- FOCUS ---------- */
 window.addEventListener("click", () => input.focus());
