@@ -52,3 +52,7 @@ input {
   font-size: 15px;
   caret-color: #58ff9a;
 }
+input {
+  caret-shape: block;
+}
+
