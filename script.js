@@ -12,7 +12,7 @@ function print(text = "") {
 /* ---------- MENU ---------- */
 function showMenu() {
   print("");
-  print("Select next option: 1 2 3 4 5 6");
+  print("Select next option:");
   print("1 About | 2 Skills | 3 Experience | 4 Projects | 5 Contact | 6 Resume");
   print("");
 }
