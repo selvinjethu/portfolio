@@ -31,7 +31,7 @@ function downloadResume() {
 print("");
 print("────────────────────────────────────────");
 print(" SELVIN RAJ • DEVOPS TERMINAL PORTFOLIO ");
-print(" Senior DevOps Engineer | Platform Engineering");
+print(" Senior DevOps Engineer | Platform Engineering | Cloud Infra Engineering | SRE");
 print("────────────────────────────────────────");
 print("");
 print("Type 'help' or choose a number:");
